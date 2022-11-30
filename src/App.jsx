@@ -17,6 +17,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/message"
+          element={<PrivateRoute element={<Message />} />}
+        />
+        <Route
+          path="/message/:q"
+          element={<PrivateRoute element={<SingleMessage />} />}
+        />
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
